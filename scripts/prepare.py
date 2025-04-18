@@ -22,6 +22,9 @@ def main():
     for header in bearssl_include_directory.rglob("*.h"):
         shutil.copyfile(header, src_directory / header.name)
         ignored.append(header.name)
+    native_stub.append("bearssl.c")
+    native_stub.sort()
+    ignored.sort()
 
     moon_pkg_path = src_directory / "moon.pkg.json"
     moon_pkg_json = json.loads(moon_pkg_path.read_text(encoding="utf-8"))
