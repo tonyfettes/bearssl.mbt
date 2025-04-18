@@ -1,6 +1,7 @@
 {
   "import": [
-    "tonyfettes/encoding"
+    "tonyfettes/encoding",
+    "tonyfettes/c"
   ],
   "native-stub": [
     "aes_big_cbcdec.c",
